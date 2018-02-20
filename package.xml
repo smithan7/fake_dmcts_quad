@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>my_quad_controller</name>
+  <name>fake_dmcts_quad</name>
   <version>0.0.0</version>
-  <description>The my_quad_controller package</description>
+  <description>The fake_dmcts_quad package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

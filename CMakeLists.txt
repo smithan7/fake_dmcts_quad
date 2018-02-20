@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(my_quad_controller)
+project(fake_dmcts_quad)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -160,7 +160,7 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 install(PROGRAMS
-   scripts/pid_waypoint_controller.py
+   scripts/fake_dmcts_quad.py
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
