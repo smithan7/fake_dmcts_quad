@@ -2,18 +2,9 @@
 
 <launch>
     <arg name="agent_index"/>
-    <arg name="agent_altitude"/>
-    <arg name="start_x"/>
-    <arg name="start_y"/>
-    <arg name="cruising_speed"/>
-    
     <group ns="fake_dmcts_quad_$(arg agent_index)">
 	    <node pkg="fake_dmcts_quad" name="fake_dmcts_quad" type="fake_dmcts_quad.py" output="screen"/>
 	    <param name="agent_index" value="$(arg agent_index)"/>
-	    <param name="agent_altitude" value="$(arg agent_altitude)"/>
-	    <param name="start_x" value="$(arg start_x)"/>
-	    <param name="start_y" value="$(arg start_y)"/>
-	    <param name="cruising_speed" value="$(arg cruising_speed)"/>
 	</group>
 </launch>
 

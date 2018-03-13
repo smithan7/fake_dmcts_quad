@@ -90,10 +90,14 @@ class Quad(object):
 if __name__ == '__main__':
   rospy.init_node('fake_dmcts_quad')
   ai = rospy.get_param('agent_index')
-  aa = rospy.get_param('agent_altitude')
-  sx = rospy.get_param('start_x')
-  sy = rospy.get_param('start_y')
-  cs = rospy.get_param('cruising_speed')
+  aa = rospy.get_param('/agent_altitudes')
+  sx = rospy.get_param('/starting_xs')
+  sy = rospy.get_param('/starting_ys')
+  cs = rospy.get_param('/cruising_speeds')
+  aa = aa[ai]
+  sx = sx[ai]
+  sy = sy[ai]
+  cs = cs[ai]
 
   rospy.loginfo("Fake_DMCTS_Quad::initializing")
   rospy.loginfo(" Fake_DMCTS_Quad::agent index: %i", ai)
