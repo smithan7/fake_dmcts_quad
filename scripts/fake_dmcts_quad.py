@@ -34,7 +34,8 @@ class Quad(object):
     self.index = ai
     self.cruising_speed = cs
     # Setup publisher
-    self.pub_odom = rospy.Publisher('/uav' + str(self.index) + '/ground_truth/state', Odometry, queue_size=10)
+    #self.pub_odom = rospy.Publisher('/uav' + str(self.index) + '/ground_truth/state', Odometry, queue_size=10)
+    self.pub_odom = rospy.Publisher('/global/odom', Odometry, queue_size=10)
     self.pub_clock = rospy.Publisher('/clock', Clock, queue_size=10)
     # Setup Subs
     self.goal_sub = rospy.Subscriber('/dmcts_' + str(self.index) + '/travel_goal', DMCTS_Travel_Goal, self.goal_callback )
